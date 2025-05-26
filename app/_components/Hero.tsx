@@ -10,7 +10,7 @@ const josefin = Josefin_Sans({
 
 export default function Hero() {
   return (
-    <div>
+    <div className="h-screen">
       <Image
         src={"/image-hero.jpg"}
         fill
@@ -18,7 +18,7 @@ export default function Hero() {
         alt="immersive experiences that deliver"
         quality={80}
       />
-      <div className="relative w-[80%] lg:w-[40%]  text-white border-2 border-white z-10 lg:ml-16 mx-auto">
+      <div className="relative z-10 bottom-[-140px]  w-[80%] lg:w-[40%]  text-white border-2 border-white lg:ml-16 mx-auto ">
         <h1
           className={`text-5xl sm:text-6xl m-3 ${josefin.className} font-extralight`}
         >

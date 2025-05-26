@@ -15,10 +15,10 @@ export default function LinksBar() {
   const pathname = usePathname();
 
   return (
-    <div>
-      <ul className="hidden sm:flex gap-8 text-lg">
+    <div className="flex items-center">
+      <ul className="hidden sm:flex gap-8 text-lg items-center justify-center">
         {navLinks.map((link) => (
-          <li key={link.name} className="group">
+          <li key={link.name} className="group mt-2">
             <Link href={link.href} className=" ">
               {link.name}
             </Link>

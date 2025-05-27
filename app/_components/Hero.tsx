@@ -20,7 +20,7 @@ export default function Hero() {
       />
       <div className="relative z-10 bottom-[-140px]  w-[80%] lg:w-[40%]  text-white border-2 border-white lg:ml-16 mx-auto ">
         <h1
-          className={`text-5xl sm:text-6xl m-3 ${josefin.className} font-extralight`}
+          className={`text-4xl sm:text-6xl m-3 ${josefin.className} font-extralight`}
         >
           IMMERSIVE EXPERIENCES THAT DELIVER
         </h1>

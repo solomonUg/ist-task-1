@@ -8,7 +8,7 @@ export const navLinks = [
   { name: "Careers", href: "/careers" },
   { name: "Events", href: "/events" },
   { name: "Products", href: "/products" },
-  { name: "Support", href: "/support" },
+  { name: "Blog", href: "/blog" },
 ];
 
 export default function LinksBar() {

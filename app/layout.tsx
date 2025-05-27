@@ -37,7 +37,7 @@ export default function RootLayout({
           </header>
           <main>{children}</main>
           <footer>
-            <p>&copy; {new Date().getFullYear()} My App</p>
+            footer
           </footer>
       </body>
     </html>

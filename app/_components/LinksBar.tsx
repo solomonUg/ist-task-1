@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const navLinks = [
+export const navLinks = [
   { name: "About", href: "/about" },
   { name: "Careers", href: "/careers" },
   { name: "Events", href: "/events" },
@@ -19,7 +19,7 @@ export default function LinksBar() {
       <ul className="hidden sm:flex gap-8 text-lg items-center justify-center">
         {navLinks.map((link) => (
           <li key={link.name} className="group mt-2">
-            <Link href={link.href} className=" ">
+            <Link href={link.href} >
               {link.name}
             </Link>
             {pathname === link.href ? (

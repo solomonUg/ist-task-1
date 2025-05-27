@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import {Alata, Josefin_Sans} from 'next/font/google';
 import Navigation from "./_components/Navigation";
+import Footer from "./_components/Footer";
 
 
 
@@ -37,7 +38,7 @@ export default function RootLayout({
           </header>
           <main>{children}</main>
           <footer>
-            footer
+            <Footer />
           </footer>
       </body>
     </html>

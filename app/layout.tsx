@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {Alata, Josefin_Sans} from 'next/font/google';
+import { Alata, Josefin_Sans } from "next/font/google";
 import Navigation from "./_components/Navigation";
 import Footer from "./_components/Footer";
-
-
 
 const alata = Alata({
   subsets: ["latin"],
@@ -18,8 +16,6 @@ const josefin = Josefin_Sans({
   variable: "--font-josefin",
 });
 
-
-
 export const metadata: Metadata = {
   title: "loop studios",
   description: "immersive experiences that deliver",
@@ -32,14 +28,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col min-h-screen justify-between ${josefin.className}`}>
-          <header className={`w-full flex justify-center items-center ${alata.className}`}>
-            <Navigation/>
-          </header>
-          <main>{children}</main>
-          <footer>
-            <Footer />
-          </footer>
+      <body
+        className={`flex flex-col min-h-screen justify-between ${josefin.className} ${josefin.variable}`}
+      >
+        <header
+          className={`w-full flex justify-center items-center ${alata.className}`}
+        >
+          <Navigation />
+        </header>
+        <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

@@ -5,10 +5,10 @@ export default function page() {
   return (
     <div className="w-full min-h-screen">
       <Image
-        src={"/image-hero.jpg"}
+        src={"/image-from-above-mobile.jpg"}
         fill
         className="object-cover object-top"
-        alt="immersive experiences that deliver"
+        alt="dummy.."
         quality={80}
       />
     </div>

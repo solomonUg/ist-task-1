@@ -18,7 +18,7 @@ export default function Hero() {
         alt="immersive experiences that deliver"
         quality={80}
       />
-      <div className="relative z-10 bottom-[-140px]  w-[80%] lg:w-[40%]  text-white border-2 border-white lg:ml-16 mx-auto ">
+      <div className="relative z-5 bottom-[-140px]  w-[80%] lg:w-[40%]  text-white border-2 border-white lg:ml-16 mx-auto ">
         <h1
           className={`text-4xl sm:text-6xl m-3 ${josefin.className} font-extralight`}
         >

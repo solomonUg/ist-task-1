@@ -38,13 +38,13 @@ export default function LinksBar() {
             <Link href={link.href}>{link.name}</Link>
             {pathname === link.href ? (
               <hr
-                className={`border-white border-b w-[60%] mx-auto my-1 ${
+                className={`border-b w-[60%] mx-auto my-1 ${
                   pathname.startsWith("/blog") ? "border-black" : "border-white"
                 }`}
               />
             ) : (
               <hr
-                className={`border-white border-b w-[60%] mx-auto my-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ${
+                className={` border-b w-[60%] mx-auto my-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ${
                   pathname.startsWith("/blog") ? "border-black" : "border-white"
                 }`}
               />

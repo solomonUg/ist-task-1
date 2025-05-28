@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   description: "immersive experiences that deliver",
 };
 
-export default async function page({ params }: { params: { slug: string } }) {
-    const { slug } = params;
+export default async function page({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
     const post = await getSinglePost(slug);
     const { userId } = post;
     const user = await getUser(userId);
@@ -45,7 +45,7 @@ export default async function page({ params }: { params: { slug: string } }) {
           />
         </div>
         <div className="flex flex-col gap-4">
-            <h1>Post {params.slug}</h1>
+            <h1>Post {slug}</h1>
             <h2 className="text-3xl font-bold text-black/90">{post.title}</h2>
             <p className="text-sm text-gray-500">Author: {user.name}</p>
             <p>{post.body}</p>

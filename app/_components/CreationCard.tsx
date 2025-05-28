@@ -26,7 +26,8 @@ export default function CreationCard({
       <h3 className="absolute bottom-8 left-8 text-white text-4xl font-light group-hover:text-black z-10">
         {label.split(" ")[0]} <br /> {label.split(" ")[1]}
       </h3>
-      <div className="absolute inset-0  bg-white/80 opacity-0 group-hover:opacity-100 transition duration-200"></div>
+      {/* overlay */}
+      <div className="absolute inset-0 bg-white/80 opacity-0 group-hover:opacity-100 transition duration-200 z-0"></div>
     </div>
   );
 }

@@ -8,7 +8,7 @@ function Navigation() {
   const pathname = usePathname();
   return (
     <nav
-      className={`w-[90%] flex justify-between items-center mt-10 z-10  ${
+      className={`w-[90%] flex justify-between items-center mt-10 z-50  ${
         pathname.startsWith("/blog") ? "text-black" : "text-white"
       }`}
     >

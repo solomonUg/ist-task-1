@@ -78,7 +78,7 @@ export default function Gallery() {
         </ul>
 
         <Link
-          href="/gallery"
+          href="#"
           className="md:hidden border-2 border-black/60 hover:text-white hover:bg-black px-10 py-3 mx-auto my-10"
         >
           SEE ALL

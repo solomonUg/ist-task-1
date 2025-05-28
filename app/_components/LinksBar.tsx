@@ -37,9 +37,17 @@ export default function LinksBar() {
           <li key={link.name} className="group mt-2">
             <Link href={link.href}>{link.name}</Link>
             {pathname === link.href ? (
-              <hr className="border-white border-b w-[60%] mx-auto my-1" />
+              <hr
+                className={`border-white border-b w-[60%] mx-auto my-1 ${
+                  pathname.startsWith("/blog") ? "border-black" : "border-white"
+                }`}
+              />
             ) : (
-              <hr className="border-white border-b w-[60%] mx-auto my-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+              <hr
+                className={`border-white border-b w-[60%] mx-auto my-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ${
+                  pathname.startsWith("/blog") ? "border-black" : "border-white"
+                }`}
+              />
             )}
           </li>
         ))}
@@ -68,11 +76,12 @@ export default function LinksBar() {
               />
             </div>
 
-            <ul className="flex flex-col gap-4 text-xl  my-10">
+            <ul className="flex flex-col gap-4 text-xl  mt-24">
               {navLinks.map((link) => (
                 <li
                   key={link.name}
                   className={`group mt-2  w-fit ${josefin.className}`}
+                  onClick={toggleMenu}
                 >
                   <Link href={link.href}>{link.name.toUpperCase()}</Link>
                   {pathname === link.href ? (

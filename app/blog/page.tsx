@@ -1,7 +1,47 @@
-import React from 'react'
+import React from "react";
+import PostCard from "../_components/PostCard";
+import type { Metadata } from "next";
 
-export default function page() {
+
+const API_URL = "https://jsonplaceholder.typicode.com/posts?_limit=15";
+
+const getPosts = async () => {
+  try {
+    const posts = await fetch(API_URL);
+    const data = await posts.json();
+    return data;
+  } catch (error) {
+    throw new Error("Failed to fetch posts");
+  }
+};
+
+type Post = {
+  id: number;
+  title: string;
+  body: string;
+};
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "immersive experiences that deliver",
+};
+
+export default async function page() {
+  const posts = await getPosts();
+
   return (
-    <div>Blog page</div>
-  )
+    <div>
+      <div className="w-[90%] flex flex-col gap-4 mx-auto my-16">
+        <h1 className="text-2xl ">Welcome to our Blog</h1>
+
+        <div className="flex flex-wrap gap-4 md:gap-8">
+          {posts.map((post: Post) => (
+            <div key={post.id} className="w-full sm:w-[30%]">
+              <PostCard id={post.id} title={post.title} body={post.body} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }

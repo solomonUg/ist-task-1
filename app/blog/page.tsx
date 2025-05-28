@@ -6,13 +6,11 @@ import type { Metadata } from "next";
 const API_URL = "https://jsonplaceholder.typicode.com/posts?_limit=15";
 
 const getPosts = async () => {
-  try {
     const posts = await fetch(API_URL);
+    if (!posts.ok) throw new Error("Failed to fetch posts");
+
     const data = await posts.json();
     return data;
-  } catch (error) {
-    throw new Error("Failed to fetch posts");
-  }
 };
 
 type Post = {

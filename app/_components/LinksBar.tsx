@@ -67,7 +67,7 @@ export default function LinksBar() {
         >
           <div className="text-white mx-8">
             <div className="flex justify-between items-center mt-8">
-              <Link href="/" className="text-2xl font-bold">
+              <Link href="/" className="text-2xl font-bold" onClick={toggleMenu}>
                 loopstudios
               </Link>
               <MdClose

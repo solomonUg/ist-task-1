@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        bokor: ['Bokor', 'cursive'],
+        alata: ['Alata', 'sans-serif'],
+        josefin: ['Josefin Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [],

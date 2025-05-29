@@ -34,7 +34,7 @@ export default async function page({ params }: { params: Promise<{ slug: string 
     const user = await getUser(userId);
 
   return (
-    <div className="flex justify-center items-center min-h-screen ">
+    <div className="flex justify-center items-center min-h-screen font-josefin">
       <div className="w-[90%] h-full flex flex-col sm:flex-row  gap-4 my-16 mx-auto">
         <div className="relative sm:w-[40%] h-[400px]">
           <Image

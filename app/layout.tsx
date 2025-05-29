@@ -1,7 +1,7 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import { Alata, Josefin_Sans } from "next/font/google";
+import { Alata, Josefin_Sans, Bokor } from "next/font/google";
 import Navigation from "./_components/Navigation";
 import Footer from "./_components/Footer";
 
@@ -9,6 +9,12 @@ const alata = Alata({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-alata",
+});
+
+const bokor = Bokor({
+  variable: "--font-bokor",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 const josefin = Josefin_Sans({
@@ -33,10 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`flex flex-col min-h-screen justify-between ${josefin.className}`}
+        className={`flex flex-col min-h-screen justify-between ${josefin.variable}  ${bokor.variable} ${alata.variable} antialiased`}
       >
         <header
-          className={`w-full flex justify-center items-center ${alata.className}`}
+          className='w-full flex justify-center items-center font-alata'
         >
           <Navigation />
         </header>

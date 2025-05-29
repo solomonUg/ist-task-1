@@ -54,7 +54,7 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="w-full flex items-center justify-center">
+    <section className="w-full flex items-center justify-center font-josefin">
       <div className="w-[90%] flex flex-col my-32">
         <div className="flex items-center justify-center md:justify-between mb-8 ">
           <h2 className="text-5xl ">Our Creations</h2>

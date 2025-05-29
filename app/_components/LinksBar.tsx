@@ -6,13 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { MdClose } from "react-icons/md";
-import { Josefin_Sans } from "next/font/google";
 
-const josefin = Josefin_Sans({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  variable: "--font-josefin",
-});
 
 export const navLinks = [
   { name: "About", href: "/about" },
@@ -62,7 +56,7 @@ export default function LinksBar() {
           onClose={toggleMenu}
           direction="left"
           size={"100%"}
-          style={{ backgroundColor: "black" }}
+          style={{ backgroundColor: "black" }} 
           className="sm:hidden"
         >
           <div className="text-white mx-8">
@@ -80,7 +74,7 @@ export default function LinksBar() {
               {navLinks.map((link) => (
                 <li
                   key={link.name}
-                  className={`group mt-2  w-fit ${josefin.className}`}
+                  className={`group mt-2  w-fit`}
                   onClick={toggleMenu}
                 >
                   <Link href={link.href}>{link.name.toUpperCase()}</Link>

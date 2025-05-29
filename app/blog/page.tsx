@@ -28,8 +28,7 @@ export default async function page() {
   const posts = await getPosts();
 
   return (
-    <div>
-      <div className="w-[90%] flex flex-col gap-4 mx-auto my-16">
+      <div className="w-[90%] flex flex-col gap-4 mx-auto my-16 font-josefin">
         <h1 className="text-2xl ">Welcome to our Blog</h1>
 
         <div className="flex flex-wrap gap-4 md:gap-8">
@@ -40,6 +39,6 @@ export default async function page() {
           ))}
         </div>
       </div>
-    </div>
+    
   );
 }

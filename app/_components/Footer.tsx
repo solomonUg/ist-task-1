@@ -34,7 +34,7 @@ export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <section className="w-full flex items-center justify-center bg-black text-white  ">
+    <section className="w-full flex items-center justify-center bg-black text-white font-alata  ">
       <div className=" w-[90%] flex flex-col sm:flex-row justify-between items-center py-8">
         <div>
           <Link href="/" className="text-3xl font-bold">

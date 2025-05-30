@@ -9,10 +9,11 @@ import { MdClose } from "react-icons/md";
 
 
 export const navLinks = [
-  { name: "About", href: "/about" },
+  { name: "About", href: "#" },
   { name: "Careers", href: "#" },
   { name: "Events", href: "#" },
   { name: "Products", href: "#" },
+  { name: "Contact Us", href: "/contact" },
   { name: "Blog", href: "/blog" },
 ];
 
@@ -33,13 +34,13 @@ export default function LinksBar() {
             {pathname === link.href ? (
               <hr
                 className={`border-b w-[60%] mx-auto my-1 ${
-                  pathname.startsWith("/blog") ? "border-black" : "border-white"
+                  pathname === "/" ? "border-white" : "border-black"
                 }`}
               />
             ) : (
               <hr
                 className={` border-b w-[60%] mx-auto my-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ${
-                  pathname.startsWith("/blog") ? "border-black" : "border-white"
+                  pathname === "/" ? "border-white" : "border-black"
                 }`}
               />
             )}

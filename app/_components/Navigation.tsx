@@ -6,14 +6,16 @@ import { usePathname } from "next/navigation";
 
 function Navigation() {
   const pathname = usePathname();
+  console.log(pathname);
+
   return (
     <nav
       className={`w-[90%] flex justify-between items-center mt-10 z-50  ${
-        pathname.startsWith("/blog") ? "text-black" : "text-white"
+      pathname === "/" ? "text-white" : "text-black"
       }`}
     >
       <Link href="/" className="text-2xl font-bold">
-        loopstudios
+      loopstudios
       </Link>
       <LinksBar />
     </nav>

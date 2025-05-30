@@ -5,13 +5,6 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 
-const metadata = {
-  title: 'Contact',
-  description: 'Contact us for more information',
-}
-
-
-
 // The following interface if you want to use TypeScript for form data validation without Zod
 
 // interface FormData {
@@ -39,7 +32,7 @@ const schema = z.object({
   }),
 });
 
-export default function page() {
+export default function Page() {
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
